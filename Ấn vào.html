@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Góc Troll Siêu Hài Hước</title>
+    <!-- Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=VT323&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .matrix-font {
+            font-family: 'VT323', monospace;
+        }
+        /* Custom animations for bouncing/shake */
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(-1px, -2px) rotate(-1deg); }
+            20% { transform: translate(-3px, 0px) rotate(1deg); }
+            30% { transform: translate(3px, 2px) rotate(0deg); }
+            40% { transform: translate(1px, -1px) rotate(1deg); }
+            50% { transform: translate(-1px, 2px) rotate(-1deg); }
+            60% { transform: translate(-3px, 1px) rotate(0deg); }
+            70% { transform: translate(3px, 1px) rotate(-1deg); }
+            80% { transform: translate(-1px, -1px) rotate(1deg); }
+            90% { transform: translate(1px, 2px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+        .shake-screen {
+            animation: shake 0.5s infinite;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-900 via-purple-900 to-slate-900 min-h-screen text-white flex flex-col items-center justify-center p-4 overflow-x-hidden">
+
+    <div id="main-container" class="max-w-xl w-full bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-2xl border border-white/20 text-center relative z-10 transition-all duration-300">
+        <div class="inline-block p-4 bg-gradient-to-tr from-yellow-400 to-orange-500 rounded-full shadow-lg mb-6 animate-bounce">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+        </div>
+
+        <h1 class="text-3xl md:text-4xl font-extrabold mb-3 tracking-tight bg-gradient-to-r from-yellow-300 to-pink-400 bg-clip-text text-transparent">
+            Khu Vực Nhận Quà Miễn Phí 🎁
+        </h1>
+        <p class="text-slate-300 mb-8 text-sm md:text-base">
+            Chào mừng bạn đến với sự kiện phát tài lộc đầu năm. Hãy chọn một phần quà bất ngờ bên dưới nhé!
+        </p>
+
+        <!-- Feature 1: The running away button -->
+        <div class="relative h-32 flex flex-col items-center justify-center mb-6">
+            <button id="runaway-btn" class="absolute px-8 py-4 bg-gradient-to-r from-emerald-400 to-teal-500 hover:from-emerald-500 hover:to-teal-600 text-slate-950 font-extrabold text-lg rounded-full shadow-xl transition-all duration-100 cursor-pointer select-none border-2 border-white/40">
+                💰 Click Để Nhận Ngay 100K
+            </button>
+            <p id="runaway-hint" class="text-xs text-yellow-300 mt-16 opacity-0 transition-opacity duration-300">
+                Hô hô, đố bắt được tôi đấy! 😎
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Feature 2: Button triggering virus/ransomware popup -->
+            <button onclick="triggerRansomware()" class="px-6 py-3 bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 font-bold rounded-xl shadow-lg transition-transform transform active:scale-95 flex items-center justify-center gap-2">
+                <span>📸 Xem Ảnh Độc Hot Nhất</span>
+            </button>
+            
+            <button onclick="triggerRansomware()" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 font-bold rounded-xl shadow-lg transition-transform transform active:scale-95 flex items-center justify-center gap-2">
+                <span>🚀 Tải Game VIP Miễn Phí</span>
+            </button>
+        </div>
+
+        <div class="mt-8 text-xs text-slate-400">
+            Cảnh báo: Web này cực kỳ an toàn, chỉ hại... tinh thần bạn bè thôi! 😈
+        </div>
+    </div>
+
+    <div id="ransomware-modal" class="fixed inset-0 bg-black/95 z-50 hidden flex flex-col items-center justify-center p-4">
+        <div class="max-w-2xl w-full bg-red-950/80 border-4 border-red-600 rounded-xl p-6 md:p-8 shadow-[0_0_50px_rgba(239,68,68,0.5)] text-left relative overflow-hidden">
+            <!-- Matrix decorative background lines -->
+            <div class="absolute inset-0 opacity-10 pointer-events-none matrix-font text-green-500 text-xs overflow-hidden leading-none">
+                0101010101010101010101010101010101010101010101010101010101010101
+                1010101010101010101010101010101010101010101010101010101010101010
+                0101010101010101010101010101010101010101010101010101010101010101
+            </div>
+
+            <div class="flex items-center gap-4 mb-6 border-b border-red-800 pb-4">
+                <div class="text-red-500 animate-pulse text-5xl">⚠️</div>
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-red-500 tracking-wider">HỆ THỐNG ĐÃ BỊ XÂM NHẬP!</h2>
+                    <p class="text-xs md:text-sm text-red-300 matrix-font">CRITICAL_SYSTEM_ERROR_CODE: #666_VIRUS_DETECTED</p>
+                </div>
+            </div>
+
+            <div class="space-y-4 mb-8 text-sm md:text-base text-slate-200">
+                <p class="font-semibold text-red-200">
+                    Máy tính của bạn đã bị mã hóa toàn bộ dữ liệu bằng mã độc tống tiền tối tân! Toàn bộ mật khẩu, ảnh thẻ dìm và lịch sử tìm kiếm đã được gửi về máy chủ trung tâm.
+                </p>
+                <div class="bg-black/60 p-4 rounded border border-red-800 matrix-font text-green-400 space-y-1">
+                    <p>> Đang đánh cắp tài khoản ngân hàng... [OK]</p>
+                    <p>> Đang tải danh bạ lên cloud ẩn danh... [OK]</p>
+                    <p>> Đang chuẩn bị định dạng ổ đĩa C:... [CHỜ LỆNH]</p>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-between bg-red-900/40 p-4 rounded-lg border border-red-700">
+                    <span class="font-bold text-yellow-300">Tự động hủy diệt dữ liệu sau:</span>
+                    <span id="countdown-timer" class="matrix-font text-4xl font-extrabold text-yellow-400 mt-2 sm:mt-0">10</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-end">
+                <button onclick="triggerRescue()" class="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg shadow-lg transition-all duration-200 cursor-pointer">
+                    🚨 Giải Cứu Ngay Lập Tức
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="troll-modal" class="fixed inset-0 bg-black/90 z-50 hidden flex flex-col items-center justify-center p-4">
+        <div class="max-w-md w-full bg-gradient-to-b from-slate-900 to-indigo-950 border-2 border-pink-500 rounded-3xl p-8 shadow-2xl text-center relative animate-bounce">
+            <div class="text-6xl mb-4">😜</div>
+            <h2 class="text-3xl font-extrabold mb-3 bg-gradient-to-r from-yellow-300 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+                Đùa Thôi Bạn Ơi!
+            </h2>
+            <p class="text-slate-200 text-base mb-6 leading-relaxed">
+                Bạn vừa bị lừa một cú cực kỳ ngoạn mục rồi! Máy tính hoàn toàn an toàn, chúc bạn một ngày tràn ngập tiếng cười và bớt cả tin lại nhé! 😆✌️
+            </p>
+            <button onclick="resetTroll()" class="w-full py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 font-extrabold rounded-xl shadow-lg transition-transform transform active:scale-95 text-white">
+                Bị Lừa Tiếp Phát Nữa 😂
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Web Audio API sound generator so no external audio files are needed
+        let audioCtx = null;
+        let alarmInterval = null;
+
+        function initAudio() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+        }
+
+        function playBeep(freq = 440, type = 'sine', duration = 0.2) {
+            try {
+                initAudio();
+                if (audioCtx.state === 'suspended') {
+                    audioCtx.resume();
+                }
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = type;
+                osc.frequency.value = freq;
+                gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + duration);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + duration);
+            } catch (e) {
+                console.log("Audio not supported or blocked");
+            }
+        }
+
+        function startAlarmSound() {
+            stopAlarmSound();
+            alarmInterval = setInterval(() => {
+                playBeep(880, 'sawtooth', 0.15);
+                setTimeout(() => playBeep(440, 'sawtooth', 0.15), 150);
+            }, 400);
+        }
+
+        function stopAlarmSound() {
+            if (alarmInterval) {
+                clearInterval(alarmInterval);
+                alarmInterval = null;
+            }
+        }
+
+        // Feature 1: Runaway button logic
+        const runawayBtn = document.getElementById('runaway-btn');
+        const runawayHint = document.getElementById('runaway-hint');
+
+        function moveButton() {
+            const x = (Math.random() - 0.5) * 260;
+            const y = (Math.random() - 0.5) * 120;
+            runawayBtn.style.transform = `translate(${x}px, ${y}px)`;
+            runawayHint.style.opacity = '1';
+            playBeep(600, 'triangle', 0.05);
+        }
+
+        runawayBtn.addEventListener('mouseover', moveButton);
+        runawayBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            moveButton();
+        });
+        runawayBtn.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            moveButton();
+        });
+
+        // Feature 2 & 3: Ransomware simulation and countdown
+        let countdownTimer = null;
+        let timeLeft = 10;
+
+        function triggerRansomware() {
+            playBeep(200, 'square', 0.5);
+            startAlarmSound();
+            document.body.classList.add('shake-screen');
+            document.getElementById('ransomware-modal').classList.remove('hidden');
+            
+            timeLeft = 10;
+            document.getElementById('countdown-timer').innerText = timeLeft;
+
+            if (countdownTimer) clearInterval(countdownTimer);
+            countdownTimer = setInterval(() => {
+                timeLeft--;
+                document.getElementById('countdown-timer').innerText = timeLeft;
+                playBeep(300, 'sawtooth', 0.1);
+
+                if (timeLeft <= 0) {
+                    clearInterval(countdownTimer);
+                    stopAlarmSound();
+                    document.body.classList.remove('shake-screen');
+                    document.getElementById('ransomware-modal').classList.add('hidden');
+                    showTrollReveal();
+                }
+            }, 1000);
+        }
+
+        function triggerRescue() {
+            stopAlarmSound();
+            if (countdownTimer) clearInterval(countdownTimer);
+            document.body.classList.remove('shake-screen');
+            document.getElementById('ransomware-modal').classList.add('hidden');
+            showTrollReveal();
+        }
+
+        function showTrollReveal() {
+            playBeep(700, 'sine', 0.3);
+            setTimeout(() => playBeep(900, 'sine', 0.4), 200);
+            document.getElementById('troll-modal').classList.remove('hidden');
+        }
+
+        function resetTroll() {
+            document.getElementById('troll-modal').classList.add('hidden');
+            runawayBtn.style.transform = 'translate(0px, 0px)';
+            runawayHint.style.opacity = '0';
+        }
+    </script>
+</body>
+</html>
